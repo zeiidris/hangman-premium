@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: #34495e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+h1{
+    position: fixed;
+    top: 10px;
+    margin: 20px;
+    font-size: 50px;
+}
+.choose{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0 ;
+    transition: all 1s ease;
+}
+.choose .choosen{
+    width: 150px;
+    height: 150px;
+    background-color: #2980b9;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.choose .choosen:active{
+    transform: scale(0.98);
+}
+.choose .choosen p{
+    font-size: 20px;
+}
+.choose .choosen p::selection{
+    background-color: transparent;
+}
+.game-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0 20px 20px;
+}
+.game-container .game{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    margin-top: -50px;
+}
+line{
+    transition: all 0.9s ease-in-out;
+}
+.figure-part{
+    display: none;
+}
+.game-container .wrong-letterEl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.game-container .wrong-letterEl .wrongLetters{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 30%;
+    left: -20px;
+}
+.game-container .wrong-letterEl p{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.game-container .wrong-letterEl span{
+    font-size: 25px;
+}
+.correct-word{
+    display: flex;
+    position: absolute;
+    max-width: 100%;
+    width: 150px;
+    height: 100px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.correct-word .letter{
+    border-bottom: 3px solid #2980b9;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    height: 50px;
+    width: 20px;
+}
+
+.notification-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+.notification-container p{
+    margin: 0;
+}
+.notification-container.show{
+    transform: translateY(-50px);
+}
+.popup-notification-container{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-notification{
+    background-color: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+.popup-notification h2{
+    margin: 20px;
+    font-size: 30px;
+}
+.popup-notification button{
+    cursor: pointer;
+    background-color: #fff;
+    color: #2980b9;
+    border: 0;
+    margin-top:20px ;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+.popup-notification button:active{
+    transform: scale(0.98);
+}
+.popup-notification button:focus{
+    outline: 0;
+}

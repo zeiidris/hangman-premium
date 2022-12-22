@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <audio src="sounds/applause.mp3" class="audio" id="win"></audio>
+    <audio src="sounds/wrong.mp3" class="audio" id="wrong"></audio>
+    <audio src="sounds/boo.mp3" class="audio" id="boo"></audio>
+    <h1>Hangman game - Premium version</h1>
+    <div class="choose" id="choose">
+        <div class="choosen" id="animals"><p>Animals</p></div>
+        <div class="choosen" id="computer"><p>Computer</p></div>
+        <div class="choosen" id="2s3"><p>2S3</p></div>
+        <div class="choosen" id="subjects"><p>school subjects</p></div>
+    </div>
+    <div class="game-container">
+        <!-- Rod -->
+        <svg height="100vh" width="800px" class="game">
+            <line x1="300" y1="620" x2="300" y2="220" />
+            <line x1="220" y1="620" x2="380" y2="620" />
+            <line x1="300" y1="220" x2="460" y2="220" />
+            <!-- face -->
+            <circle cx="460" cy="320" r="30" class="figure-part"/>
+            <!-- body -->
+            <line x1="460" y1="350" x2="460" y2="470" class="figure-part"/>
+            <!-- Hands -->
+            <line x1="460" y1="410" x2="420" y2="370" class="figure-part"/>
+            <line x1="460" y1="410" x2="500" y2="370" class="figure-part"/>
+            <!-- Legs -->
+            <line x1="460" y1="470" x2="420" y2="510" class="figure-part" />
+            <line x1="460" y1="470" x2="500" y2="510" class="figure-part" />
+            <line x1="460" y1="220" x2="460" y2="290" class="figure-part"/>
+        </svg>
+        <div class="wrong-letterEl">
+            <div class="wrongLetters" id="wrongLetters">
+            </div>
+        </div>
+        <div class="correct-word" id="correct-word">
+     
+        </div>
+    </div>
+    <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter</p>
+    </div>
+    <div class="popup-notification-container" id="popup-notification-container">
+        <div class="popup-notification">
+            <h2 id="final-message"></h2>
+            <p id="message"></p>
+            <button id="btn" class="btn">Play again</button>
+        </div>
+    </div>
+</body>
+</html>
